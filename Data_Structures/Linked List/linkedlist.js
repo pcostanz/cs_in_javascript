@@ -1,5 +1,7 @@
 
-// LinkedList constructor function
+// LinkedList constructor function - we're only
+// keeping a reference to the head of the list
+// in this implementation
 
 var LinkedList = function() {
 	this.head = null;

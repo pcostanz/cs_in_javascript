@@ -51,17 +51,23 @@ DLinkedList.prototype.prepend = function(value){
 		this.tail = node;
 	}
 
+	// Otherwise, we will essentially push the links
+	// down the chain by making room for the new head.
+	// We set the current head's previous equal to the
+	// new node we're about to insert, getting it
+	// ready to be the second in line.
+
+	// Then we need to prepare the node we're about
+	// to insert to be the new head by setting its'
+	// next equal to the current head (which will
+	// be second), and then finish the prepend off
+	// by setting the head equal to the new node.
+
 	else {
 		this.head.prev = node;
 		node.next = this.head;
 		this.head = node;
-
-
-		// node.next = this.head;
-		// this.head.prev = node;
-		// this.head = node;
 	}
-
 };
 
 var dll = new DLinkedList();
