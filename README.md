@@ -1,4 +1,12 @@
-cs_in_javascript
+# Computer Science in JavaScript
 ================
 
-Computer Science concepts in JavaScript
+Heavily commented computer science concepts written mostly in Object Oriented JavaScript.
+
+*Binary Tree
+*Linked List
+*Doubly Linked List
+*Hash Table
+*Heap
+*Queue
+*Stack
