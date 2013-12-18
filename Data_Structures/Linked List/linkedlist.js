@@ -100,7 +100,7 @@ LinkedList.prototype.print = function(){
 // statements where it makes sense.
 
 // Create an instance of the LinkedList class via
-// the constructo function
+// the constructor function
 // var ll = new LinkedList();
 
 // Insert some data items into the linked list
