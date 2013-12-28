@@ -33,8 +33,6 @@ Stack.prototype.pop = function(callback) {
 }
 
 Stack.prototype.print = function() {
-
-	console.log("printing");
 	var current = this.top;
 	var tempStack = [];
 
@@ -47,7 +45,7 @@ Stack.prototype.print = function() {
 
 var popSuccessCheck = function(err, popped) {
 	console.log("err = " + err);
-	console.log("value = " + popped);
+	console.log("popped = " + popped);
 }
 
 var stack = new Stack();
