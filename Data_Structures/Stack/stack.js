@@ -15,16 +15,20 @@ Stack.prototype.push = function(value) {
 	this.size += 1;
 }
 
-Stack.prototype.pop = function() {
+Stack.prototype.pop = function(callback) {
+	var err = null;
+	var popped = null;
+
 	if (this.top === null) {
-		console.log("Error, underflow");
-		return;
+		err = "Underflow Error";
 	} else {
-		var popped = this.top.data;
+		popped = this.top.data;
 		this.top = this.top.prev;
 		this.size -= 1;
-		console.log(popped);
-		return popped;
+	}
+
+	if (callback) {
+		callback(err, popped);
 	}
 }
 
@@ -38,8 +42,12 @@ Stack.prototype.print = function() {
 		tempStack.unshift(current.data);
 		current = current.prev;
 	}
-	console.log(tempStack);
 	return tempStack;
+}
+
+var popSuccessCheck = function(err, popped) {
+	console.log("err = " + err);
+	console.log("value = " + popped);
 }
 
 var stack = new Stack();
